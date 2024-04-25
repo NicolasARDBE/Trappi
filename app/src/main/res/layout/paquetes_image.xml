@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/paisaje"
+        android:src="@drawable/paisaje_ll"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/paisaje"
+        android:text="@string/paquetesFondsss"
+        android:textSize="30sp" />
+
+</LinearLayout>

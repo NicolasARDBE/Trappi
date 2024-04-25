@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Trappi</string>
+    <string name="paquetesFondsss">Hemos encontrado los siguientes posibles</string>
+    <string name="destPack">Destinos y paquetes turísticos:</string>
 </resources>
