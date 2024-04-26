@@ -14,11 +14,57 @@
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="350dp"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="30dp"
-        android:layout_height="wrap_content"
         android:layout_below="@+id/paisaje"
         android:text="Plan paquete"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/anotherText"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_toRightOf="@+id/txtName"
+        android:textColor="@color/light_green"
+        android:textStyle="bold"
+        android:layout_below="@+id/paisaje"
+        android:text="Precio"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/pin"
+        android:src="@drawable/pin_verde"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/txtName"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtName"
+        android:text="Pais destino"
+        android:textSize="18sp"
+        android:textColor="@color/dark_gray"
+        android:layout_toRightOf="@id/pin"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPersona"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/txtName"
+        android:layout_toRightOf="@+id/location"
+        android:text="Por persona"
+        android:textSize="18sp"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"/>
+
 
 </RelativeLayout>
