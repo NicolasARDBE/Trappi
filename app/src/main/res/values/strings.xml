@@ -24,4 +24,7 @@
     <string name="total">Total</string>$1.200,00
     <string name="precio_total">$1.300,99</string>
     <string name="pago_exitoso">Pago exitoso</string>
+    <string name="bienvenida">Bienvenido a Trappi</string>
+    <string name="descrHome">Aquí puedes organizar tus próximas vacaciones!</string>
+
 </resources>

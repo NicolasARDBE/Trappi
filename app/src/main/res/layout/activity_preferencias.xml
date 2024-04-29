@@ -7,7 +7,6 @@
     tools:context=".Preferencias"
     android:orientation="vertical">
 
-
     <Button
         android:id="@+id/FechaSalida"
         android:layout_width="wrap_content"
