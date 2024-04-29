@@ -26,14 +26,14 @@
         android:id="@+id/anotherText"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="30dp"
-        android:layout_toRightOf="@+id/txtName"
-        android:textColor="@color/light_green"
-        android:textStyle="bold"
         android:layout_below="@+id/paisaje"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/txtName"
         android:text="Precio"
-        android:textSize="20sp" />
+        android:textColor="@color/green_bright"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/pin"

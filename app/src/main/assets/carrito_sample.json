@@ -1,0 +1,60 @@
+{
+  "id": "plan_001",
+  "userId": "user_001",
+  "vuelos": [
+    {
+      "id": "flight_001",
+      "numeroVuelo": "ABC123",
+      "aerolineaId": "airline_001",
+      "lugarOrigen": "Ciudad A",
+      "lugarDestino": "Ciudad B",
+      "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
+      "precio": 350.0
+    },
+    {
+      "id": "flight_002",
+      "numeroVuelo": "XYZ456",
+      "aerolineaId": "airline_002",
+      "lugarOrigen": "Ciudad B",
+      "lugarDestino": "Ciudad A",
+      "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
+      "precio": 400.0
+    }
+  ],
+  "hospedajes": [
+    {
+      "id": "lodging_001",
+      "nombre": "Hotel X",
+      "destinoId": "destination_001",
+      "estrellas": "4",
+      "precioNoche": "150.0"
+    },
+    {
+      "id": "lodging_002",
+      "nombre": "Hotel Y",
+      "destinoId": "destination_002",
+      "estrellas": "5",
+      "precioNoche": "200.0"
+    }
+  ],
+  "actividades": [
+    {
+      "id": "activity_001",
+      "tipo": "Turismo",
+      "nombre": "Tour en Ciudad B",
+      "destinoId": "destination_002",
+      "fecha": "Mon Apr 29 06:33:30 GMT 2024",
+      "estrellas": 4,
+      "precio": 50.0
+    },
+    {
+      "id": "activity_002",
+      "tipo": "Aventura",
+      "nombre": "Senderismo en las Montañas",
+      "destinoId": "destination_001",
+      "fecha": "Mon Apr 29 06:33:30 GMT 2024",
+      "estrellas": 5,
+      "precio": 80.0
+    }
+  ]
+}

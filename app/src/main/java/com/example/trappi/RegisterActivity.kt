@@ -3,7 +3,6 @@ package com.example.trappi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.trappi.databinding.ActivityMainBinding
 import com.example.trappi.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.login.setOnClickListener{
-            startActivity(Intent(baseContext, MainActivity::class.java))
+            startActivity(Intent(baseContext, LoginActivity::class.java))
         }
     }
 }

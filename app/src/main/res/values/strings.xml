@@ -2,4 +2,26 @@
     <string name="app_name">Trappi</string>
     <string name="paquetesFondsss">Hemos encontrado los siguientes posibles</string>
     <string name="destPack">Destinos y paquetes turísticos:</string>
+    <string name="pago_recibido">Tu pago fue exitoso</string>
+    <string name="compra_realizada_correctamente">
+        Prepara tus maletas y disfruta de tu viaje
+        \nTe espera una experiencia inolvidable
+    </string>
+
+    <string name="carrito_total">Total a pagar: $</string>
+    <string name="checkOut">CheckOut</string>
+    <string name="carrito">Carrito</string>
+    <string name="Home_For_Testing">Home For Testing</string>
+    <string name="This_is_a_home_for_testing_screens">This is a home for testing screens</string>
+    <string name="product_Name">Nombre del producto</string>
+    <string name="price">Precio</string>
+    <string name="payment">Pago</string>
+    <string name="confirmar_pago">Confirmar pago</string>
+    <string name="orden">Orden</string>
+    <string name="precio_orden">$100,00</string>
+    <string name="fee">Comision</string>
+    <string name="precio_fee">$1.200,00</string>
+    <string name="total">Total</string>$1.200,00
+    <string name="precio_total">$1.300,99</string>
+    <string name="pago_exitoso">Pago exitoso</string>
 </resources>

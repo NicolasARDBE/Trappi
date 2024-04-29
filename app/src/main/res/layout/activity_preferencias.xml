@@ -81,16 +81,15 @@
 
     <Button
         android:id="@+id/Listo"
-        android:layout_width="wrap_content"
+        android:layout_width="182dp"
         android:layout_height="wrap_content"
-        android:text="Listo"
         android:layout_alignTop="@+id/Refrescar"
-        android:layout_marginTop="50dp"
-        android:paddingHorizontal="60dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="25dp"
-        />
+        android:backgroundTint="#4CAF50"
+        android:paddingHorizontal="60dp"
+        android:text="Listo" />
     <Button
         android:id="@+id/Refrescar"
         android:layout_width="wrap_content"

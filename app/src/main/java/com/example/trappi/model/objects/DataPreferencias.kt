@@ -1,4 +1,4 @@
-package com.example.trappi
+package com.example.trappi.model.objects
 
 object DataPreferencias {
     var year1 = 0

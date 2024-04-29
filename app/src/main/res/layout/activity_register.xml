@@ -17,6 +17,7 @@
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iniciarSesion" />
 
@@ -25,20 +26,21 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="text|textPassword|textNoSuggestions"
-        app:layout_constraintBottom_toTopOf="@+id/repetePassword"
+        app:layout_constraintBottom_toTopOf="@+id/repeatPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <ImageView
         android:id="@+id/imgLogin"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="205dp"
+        android:layout_height="192dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
@@ -54,12 +56,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:backgroundTint="#68D8D6"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/blue_bright"
         android:text="Iniciar sesión"
-        android:textColor="#343F4B"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -68,13 +71,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="#3C4858"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/green"
         android:drawablePadding="8dp"
         android:text="Registrarme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -91,16 +94,17 @@
         android:textSize="40dp"/>
 
     <EditText
-        android:id="@+id/repetePassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/repeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:ems="10"
         android:hint="Repita Contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 

@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.Toast
 import com.example.trappi.databinding.ActivityPreferenciasBinding
+import com.example.trappi.model.objects.DataPreferencias
 import java.util.Calendar
 
 class Preferencias : AppCompatActivity() {
@@ -107,7 +108,7 @@ class Preferencias : AppCompatActivity() {
             if(fechaSalidaCheck && fechaLlegadaCheck && personasCheck && preferenciasAux.size>=5){
                 Toast.makeText(this, "Preferencias guardadas", Toast.LENGTH_SHORT).show()
                 DataPreferencias.preferencias = preferenciasAux
-                Toast.makeText(this,DataPreferencias.preferencias.toString(),Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, DataPreferencias.preferencias.toString(),Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this, "Algun dato incompleto", Toast.LENGTH_SHORT).show()
             }
