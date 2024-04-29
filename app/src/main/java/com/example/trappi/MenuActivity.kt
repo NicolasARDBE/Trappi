@@ -1,19 +1,19 @@
 package com.example.trappi
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.content.Intent
-import androidx.activity.enableEdgeToEdge
-import com.example.trappi.databinding.ActivityHomeBinding
+import com.example.trappi.databinding.ActivityMenuBinding
 
-class Home : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
+class MenuActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

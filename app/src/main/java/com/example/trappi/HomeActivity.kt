@@ -34,10 +34,14 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.logOut.setOnClickListener{
             cerrarSesion()
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, LoginActivity::class.java)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(i)
             finish()
+        }
+
+        binding.menu.setOnClickListener{
+            startActivity(Intent(baseContext, MenuActivity::class.java))
         }
     }
     private fun cerrarSesion(){

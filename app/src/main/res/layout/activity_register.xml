@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white_vanilla"
+    >
 
     <EditText
         android:id="@+id/username"
@@ -45,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trappilogodef" />
+        app:srcCompat="@drawable/trappilogo" />
 
     <Button
         android:id="@+id/registerButton"
@@ -54,9 +56,8 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
-        android:backgroundTint="#68D8D6"
+        android:backgroundTint="@color/blue_bright"
         android:text="Registrarme"
-        android:textColor="#343F4B"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -70,7 +71,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#3C4858"
+        android:backgroundTint="@color/green_bright"
         android:drawablePadding="8dp"
         android:text="Iniciar Sesión"
         app:layout_constraintBottom_toBottomOf="parent"

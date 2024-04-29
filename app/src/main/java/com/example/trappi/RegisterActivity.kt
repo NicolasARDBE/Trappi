@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.loginButton.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
         binding.registerButton.setOnClickListener{
             if (!blankSpaces()){

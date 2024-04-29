@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FelicidadesCompra">
+    android:background="@color/white_vanilla"
+    tools:context=".FelicidadesCompra"
+    >
 
     <ImageView
         android:id="@+id/imageView3"

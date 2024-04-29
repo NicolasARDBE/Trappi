@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="@color/white_vanilla"
+    >
 
     <ImageButton
         android:id="@+id/menu"
@@ -24,7 +26,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/white"
+        android:background="@color/white_vanilla"
         android:scaleType="fitCenter"
         android:src="@drawable/baseline_logout_24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,25 +35,24 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="190dp"
+        android:layout_width="277dp"
+        android:layout_height="189dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/homerana" />
 
     <ImageView
         android:id="@+id/imageButton"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_width="278dp"
+        android:layout_height="178dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@color/white"

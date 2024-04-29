@@ -23,7 +23,7 @@ class FelicidadesCompra : AppCompatActivity() {
         }
 
         binding.homeButton.setOnClickListener {
-            startActivity(Intent(baseContext, Home::class.java))
+            startActivity(Intent(baseContext, HomeActivity::class.java))
         }
     }
 }
