@@ -1,7 +1,3 @@
-Claro, aquí tienes un ejemplo de un README para la aplicación Trappi:
-
----
-
 # Trappi
 
 ## Descripción
@@ -60,7 +56,3 @@ Trappi es una aplicación móvil diseñada para ofrecer una experiencia integral
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-Este README proporciona una descripción general de la aplicación Trappi, detallando sus características, tecnologías utilizadas, instrucciones de instalación, cómo contribuir al proyecto, el equipo detrás de la aplicación y la información de licencia. ¡Espero que te sea útil! Si necesitas más información o alguna sección adicional, házmelo saber.
