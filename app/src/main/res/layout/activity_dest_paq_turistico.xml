@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/gray">
 
     <ImageButton
@@ -15,7 +16,7 @@
     android:src="@drawable/baseline_menu_24" />
 
     <ImageButton
-        android:id="@+id/perfil"
+        android:id="@+id/logOut"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -23,6 +24,8 @@
         android:layout_marginRight="16dp"
         android:background="@color/gray"
         android:scaleType="fitCenter"
+        android:src="@drawable/baseline_logout_24"
+        tools:src="@drawable/baseline_logout_24" />
         />
 
     <TextView

@@ -2,4 +2,7 @@
     <string name="app_name">Trappi</string>
     <string name="paquetesFondsss">Hemos encontrado los siguientes posibles</string>
     <string name="destPack">Destinos y paquetes turísticos:</string>
+    <string name="bienvenida">Bienvenido a Trappi</string>
+    <string name="descrHome">Aquí puedes organizar tus próximas vacaciones!</string>
+
 </resources>

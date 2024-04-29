@@ -15,22 +15,21 @@
         android:layout_marginBottom="8dp"
         android:hint="Usuario"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iniciarSesion" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="text|textPassword|textNoSuggestions"
-        app:layout_constraintBottom_toTopOf="@+id/repetePassword"
+        android:layout_marginBottom="8dp"
+        android:hint="Correo"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -46,24 +45,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trappilogo" />
+        app:srcCompat="@drawable/trappilogodef" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
         android:backgroundTint="#68D8D6"
-        android:text="Iniciar sesión"
+        android:text="Registrarme"
         android:textColor="#343F4B"
-        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -71,11 +72,12 @@
         android:layout_marginBottom="100dp"
         android:backgroundTint="#3C4858"
         android:drawablePadding="8dp"
-        android:text="Registrarme"
+        android:text="Iniciar Sesión"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
 
     <TextView
         android:id="@+id/iniciarSesion"
@@ -91,17 +93,19 @@
         android:textSize="40dp"/>
 
     <EditText
-        android:id="@+id/repetePassword"
+        android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginBottom="7dp"
         android:ems="10"
-        android:hint="Repita Contraseña"
+        android:hint="Contraseña"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

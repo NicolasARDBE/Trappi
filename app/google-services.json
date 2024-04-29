@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164173069242",
+    "project_id": "trappi-d3ac6",
+    "storage_bucket": "trappi-d3ac6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164173069242:android:9417da8f938b01eb55fb83",
+        "android_client_info": {
+          "package_name": "com.example.trappi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwJbxqyRQprsG5aRRCzuLkeNiHpPGmJ-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
