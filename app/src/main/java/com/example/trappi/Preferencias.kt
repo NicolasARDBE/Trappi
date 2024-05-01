@@ -2,6 +2,7 @@ package com.example.trappi
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -105,11 +106,14 @@ class Preferencias : AppCompatActivity() {
         }
 
         binding.Listo.setOnClickListener {
-            if(fechaSalidaCheck && fechaLlegadaCheck && personasCheck && preferenciasAux.size>=5){
+            if (fechaSalidaCheck && fechaLlegadaCheck && personasCheck && preferenciasAux.size >= 5) {
                 Toast.makeText(this, "Preferencias guardadas", Toast.LENGTH_SHORT).show()
                 DataPreferencias.preferencias = preferenciasAux
-                Toast.makeText(this, DataPreferencias.preferencias.toString(),Toast.LENGTH_SHORT).show()
-            }else{
+                Toast.makeText(this, DataPreferencias.preferencias.toString(), Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, Dest_PaqTuristico::class.java)
+                startActivity(intent)
+            } else {
                 Toast.makeText(this, "Algun dato incompleto", Toast.LENGTH_SHORT).show()
             }
         }
