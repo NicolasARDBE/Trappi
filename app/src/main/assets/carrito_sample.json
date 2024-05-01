@@ -1,60 +1,302 @@
-{
-  "id": "plan_001",
-  "userId": "user_001",
-  "vuelos": [
-    {
-      "id": "flight_001",
-      "numeroVuelo": "ABC123",
-      "aerolineaId": "airline_001",
-      "lugarOrigen": "Ciudad A",
-      "lugarDestino": "Ciudad B",
-      "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
-      "precio": 350.0
-    },
-    {
-      "id": "flight_002",
-      "numeroVuelo": "XYZ456",
-      "aerolineaId": "airline_002",
-      "lugarOrigen": "Ciudad B",
-      "lugarDestino": "Ciudad A",
-      "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
-      "precio": 400.0
-    }
-  ],
-  "hospedajes": [
-    {
-      "id": "lodging_001",
-      "nombre": "Hotel X",
-      "destinoId": "destination_001",
-      "estrellas": "4",
-      "precioNoche": "150.0"
-    },
-    {
-      "id": "lodging_002",
-      "nombre": "Hotel Y",
-      "destinoId": "destination_002",
-      "estrellas": "5",
-      "precioNoche": "200.0"
-    }
-  ],
-  "actividades": [
-    {
-      "id": "activity_001",
-      "tipo": "Turismo",
-      "nombre": "Tour en Ciudad B",
-      "destinoId": "destination_002",
-      "fecha": "Mon Apr 29 06:33:30 GMT 2024",
-      "estrellas": 4,
-      "precio": 50.0
-    },
-    {
-      "id": "activity_002",
-      "tipo": "Aventura",
-      "nombre": "Senderismo en las Montañas",
-      "destinoId": "destination_001",
-      "fecha": "Mon Apr 29 06:33:30 GMT 2024",
-      "estrellas": 5,
-      "precio": 80.0
-    }
-  ]
-}
+[
+  {
+    "id": "plan_001",
+    "userId": "user_001",
+    "vuelos": [
+      {
+        "id": "flight_001",
+        "numeroVuelo": "ABC123",
+        "aerolineaId": "airline_001",
+        "lugarOrigen": "Roma",
+        "lugarDestino": "París",
+        "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
+        "precio": 350.0
+      },
+      {
+        "id": "flight_002",
+        "numeroVuelo": "XYZ456",
+        "aerolineaId": "airline_002",
+        "lugarOrigen": "París",
+        "lugarDestino": "Roma",
+        "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
+        "precio": 400.0
+      }
+    ],
+    "hospedajes": [
+      {
+        "id": "lodging_001",
+        "nombre": "Hotel X",
+        "destinoId": "destination_001",
+        "estrellas": "4",
+        "precioNoche": "150.0"
+      },
+      {
+        "id": "lodging_002",
+        "nombre": "HardRock Hotel",
+        "destinoId": "destination_002",
+        "estrellas": "5",
+        "precioNoche": "200.0"
+      }
+    ],
+    "actividades": [
+      {
+        "id": "activity_001",
+        "tipo": "Turismo",
+        "nombre": "Tour en París",
+        "destinoId": "destination_002",
+        "fecha": "Mon Apr 29 06:33:30 GMT 2024",
+        "estrellas": 4,
+        "precio": 50.0
+      },
+      {
+        "id": "activity_002",
+        "tipo": "Aventura",
+        "nombre": "Senderismo en los Alpes",
+        "destinoId": "destination_001",
+        "fecha": "Mon Apr 29 06:33:30 GMT 2024",
+        "estrellas": 5,
+        "precio": 80.0
+      }
+    ]
+  },
+  {
+    "id": "plan_002",
+    "userId": "user_002",
+    "vuelos": [
+      {
+        "id": "flight_003",
+        "numeroVuelo": "DEF789",
+        "aerolineaId": "airline_003",
+        "lugarOrigen": "Londres",
+        "lugarDestino": "Ámsterdam",
+        "fechaSalida": "Mon Apr 30 07:45:00 GMT 2024",
+        "precio": 420.0
+      },
+      {
+        "id": "flight_004",
+        "numeroVuelo": "GHI101",
+        "aerolineaId": "airline_004",
+        "lugarOrigen": "Ámsterdam",
+        "lugarDestino": "Londres",
+        "fechaSalida": "Mon Apr 30 07:45:00 GMT 2024",
+        "precio": 380.0
+      }
+    ],
+    "hospedajes": [
+      {
+        "id": "lodging_003",
+        "nombre": "Hotel Z",
+        "destinoId": "destination_003",
+        "estrellas": "3",
+        "precioNoche": "120.0"
+      },
+      {
+        "id": "lodging_004",
+        "nombre": "Hotel W",
+        "destinoId": "destination_004",
+        "estrellas": "4",
+        "precioNoche": "180.0"
+      }
+    ],
+    "actividades": [
+      {
+        "id": "activity_003",
+        "tipo": "Cultural",
+        "nombre": "Visita a Museo en Ámsterdam",
+        "destinoId": "destination_004",
+        "fecha": "Mon Apr 30 07:45:00 GMT 2024",
+        "estrellas": 4,
+        "precio": 60.0
+      },
+      {
+        "id": "activity_004",
+        "tipo": "Deportiva",
+        "nombre": "Surf en Playa",
+        "destinoId": "destination_003",
+        "fecha": "Mon Apr 30 07:45:00 GMT 2024",
+        "estrellas": 3,
+        "precio": 90.0
+      }
+    ]
+  },
+  {
+    "id": "plan_003",
+    "userId": "user_003",
+    "vuelos": [
+      {
+        "id": "flight_005",
+        "numeroVuelo": "JKL321",
+        "aerolineaId": "airline_005",
+        "lugarOrigen": "Madrid",
+        "lugarDestino": "Berlín",
+        "fechaSalida": "Tue May 1 08:30:00 GMT 2024",
+        "precio": 280.0
+      },
+      {
+        "id": "flight_006",
+        "numeroVuelo": "MNO654",
+        "aerolineaId": "airline_006",
+        "lugarOrigen": "Berlín",
+        "lugarDestino": "Madrid",
+        "fechaSalida": "Tue May 1 08:30:00 GMT 2024",
+        "precio": 320.0
+      }
+    ],
+    "hospedajes": [
+      {
+        "id": "lodging_005",
+        "nombre": "Hotel Decameron",
+        "destinoId": "destination_005",
+        "estrellas": "4",
+        "precioNoche": "170.0"
+      },
+      {
+        "id": "lodging_006",
+        "nombre": "Hotel Ritz",
+        "destinoId": "destination_006",
+        "estrellas": "5",
+        "precioNoche": "220.0"
+      }
+    ],
+    "actividades": [
+      {
+        "id": "activity_005",
+        "tipo": "Cultural",
+        "nombre": "Visita al Museo del Prado",
+        "destinoId": "destination_005",
+        "fecha": "Tue May 1 08:30:00 GMT 2024",
+        "estrellas": 5,
+        "precio": 40.0
+      },
+      {
+        "id": "activity_006",
+        "tipo": "Gastronómica",
+        "nombre": "Tour de Tapas",
+        "destinoId": "destination_006",
+        "fecha": "Tue May 1 08:30:00 GMT 2024",
+        "estrellas": 4,
+        "precio": 60.0
+      }
+    ]
+  },
+  {
+    "id": "plan_004",
+    "userId": "user_004",
+    "vuelos": [
+      {
+        "id": "flight_007",
+        "numeroVuelo": "PQR987",
+        "aerolineaId": "airline_007",
+        "lugarOrigen": "Tokio",
+        "lugarDestino": "Sídney",
+        "fechaSalida": "Wed May 2 10:15:00 GMT 2024",
+        "precio": 650.0
+      },
+      {
+        "id": "flight_008",
+        "numeroVuelo": "STU210",
+        "aerolineaId": "airline_008",
+        "lugarOrigen": "Sídney",
+        "lugarDestino": "Tokio",
+        "fechaSalida": "Wed May 2 10:15:00 GMT 2024",
+        "precio": 600.0
+      }
+    ],
+    "hospedajes": [
+      {
+        "id": "lodging_007",
+        "nombre": "Sheraton Hotel",
+        "destinoId": "destination_007",
+        "estrellas": "5",
+        "precioNoche": "300.0"
+      },
+      {
+        "id": "lodging_008",
+        "nombre": "Hilton Hotel",
+        "destinoId": "destination_008",
+        "estrellas": "4",
+        "precioNoche": "250.0"
+      }
+    ],
+    "actividades": [
+      {
+        "id": "activity_007",
+        "tipo": "Aventura",
+        "nombre": "Buceo en la Gran Barrera de Coral",
+        "destinoId": "destination_008",
+        "fecha": "Wed May 2 10:15:00 GMT 2024",
+        "estrellas": 5,
+        "precio": 100.0
+      },
+      {
+        "id": "activity_008",
+        "tipo": "Cultural",
+        "nombre": "Visita al Templo Senso-ji",
+        "destinoId": "destination_007",
+        "fecha": "Wed May 2 10:15:00 GMT 2024",
+        "estrellas": 4,
+        "precio": 80.0
+      }
+    ]
+  },
+  {
+    "id": "plan_005",
+    "userId": "user_005",
+    "vuelos": [
+      {
+        "id": "flight_009",
+        "numeroVuelo": "VWX543",
+        "aerolineaId": "airline_009",
+        "lugarOrigen": "Nueva York",
+        "lugarDestino": "Los Ángeles",
+        "fechaSalida": "Thu May 3 12:00:00 GMT 2024",
+        "precio": 280.0
+      },
+      {
+        "id": "flight_010",
+        "numeroVuelo": "YZA876",
+        "aerolineaId": "airline_010",
+        "lugarOrigen": "Los Ángeles",
+        "lugarDestino": "Nueva York",
+        "fechaSalida": "Thu May 3 12:00:00 GMT 2024",
+        "precio": 320.0
+      }
+    ],
+    "hospedajes": [
+      {
+        "id": "lodging_009",
+        "nombre": "Waldorf Astoria",
+        "destinoId": "destination_009",
+        "estrellas": "5",
+        "precioNoche": "350.0"
+      },
+      {
+        "id": "lodging_010",
+        "nombre": "The Ritz-Carlton",
+        "destinoId": "destination_010",
+        "estrellas": "5",
+        "precioNoche": "400.0"
+      }
+    ],
+    "actividades": [
+      {
+        "id": "activity_009",
+        "tipo": "Cultural",
+        "nombre": "Visita al Museo Metropolitano de Arte",
+        "destinoId": "destination_009",
+        "fecha": "Thu May 3 12:00:00 GMT 2024",
+        "estrellas": 5,
+        "precio": 40.0
+      },
+      {
+        "id": "activity_010",
+        "tipo": "Gastronómica",
+        "nombre": "Degustación de vinos en Napa Valley",
+        "destinoId": "destination_010",
+        "fecha": "Thu May 3 12:00:00 GMT 2024",
+        "estrellas": 4,
+        "precio": 60.0
+      }
+    ]
+  }
+]

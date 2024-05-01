@@ -5,8 +5,7 @@ import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trappi.adapters.AdapterPaquetes
-import com.example.trappi.controllers.CarritoController
-import com.example.trappi.model.entities.Plan
+import com.example.trappi.controllers.PlanManager
 
 class Dest_PaqTuristico : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,26 +17,9 @@ class Dest_PaqTuristico : AppCompatActivity() {
     }
 
     private fun mostrarPlanes() {
-        // Aquí deberías obtener la lista de planes desde donde sea que la tengas almacenada
-        val planes: List<Plan> = obtenerListaPlanes()
-
-        val adapter = AdapterPaquetes(this, planes)
-        val lista_planes = findViewById<ListView>(R.id.listStar)
-        lista_planes.adapter = adapter
-    }
-
-    private fun obtenerListaPlanes(): List<Plan> {
-        val carritoJson = CarritoController.getCarrito() // Obtener el JSON del carrito
-        val planes = mutableListOf<Plan>()
-
-        // Si el carrito no está vacío, convertir el JSON del carrito a objetos Plan
-        if (carritoJson != null) {
-            //val carrito = CarritoController.fromJson()
-            //planes.add(carrito) // Agregar el carrito como un plan más
-        }
-
-        // Aquí puedes agregar más lógica para obtener otros planes, si es necesario
-
-        return planes
+        PlanManager.instance.fillListOfPlanes(this)
+        val adapter = AdapterPaquetes(this, PlanManager.instance.listaPlanes)
+        val listaPlanes = findViewById<ListView>(R.id.listStar)
+        listaPlanes.adapter = adapter
     }
 }
