@@ -1,6 +1,5 @@
 package com.example.trappi.controllers
 
-import android.app.Activity
 import android.content.res.AssetManager
 import android.util.Log
 import com.example.trappi.model.entities.Actividad

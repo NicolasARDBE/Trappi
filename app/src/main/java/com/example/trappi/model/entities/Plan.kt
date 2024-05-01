@@ -1,6 +1,6 @@
 package com.example.trappi.model.entities
 
-class Plan(id: String, userId: String, vuelos: MutableList<Vuelo>, hospedajes: MutableList<Hospedaje>, actividades: MutableList<Actividad>){
+class Plan(id: String, userId: String, vuelos: List<Vuelo>, hospedajes: List<Hospedaje>, actividades: List<Actividad>){
     val id: String
     val userId: String
     val vuelos: MutableList<Vuelo>
@@ -10,9 +10,9 @@ class Plan(id: String, userId: String, vuelos: MutableList<Vuelo>, hospedajes: M
     init {
         this.id = id
         this.userId = id
-        this.vuelos = vuelos
-        this.hospedajes = hospedajes
-        this.actividades = actividades
+        this.vuelos = vuelos.toMutableList()
+        this.hospedajes = hospedajes.toMutableList()
+        this.actividades = actividades.toMutableList()
     }
 
     fun getPrecioTotal(): Double{

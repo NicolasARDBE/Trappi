@@ -7,7 +7,6 @@ import com.example.trappi.model.entities.Hospedaje
 import com.example.trappi.model.entities.Plan
 import com.example.trappi.model.entities.Vuelo
 import org.json.JSONArray
-import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.text.SimpleDateFormat
