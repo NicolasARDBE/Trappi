@@ -1,11 +1,11 @@
 package com.example.trappi.model.entities
 
-class Plan(id: String, userId: String, vuelos: List<Vuelo>, hospedajes: List<Hospedaje>, actividades: List<Actividad>){
+class Plan(id: String, userId: String, vuelos: MutableList<Vuelo>, hospedajes: MutableList<Hospedaje>, actividades: MutableList<Actividad>){
     val id: String
     val userId: String
-    val vuelos: List<Vuelo>
-    val hospedajes: List<Hospedaje>?
-    val actividades: List<Actividad>
+    val vuelos: MutableList<Vuelo>
+    val hospedajes: MutableList<Hospedaje>?
+    val actividades: MutableList<Actividad>
 
     init {
         this.id = id
