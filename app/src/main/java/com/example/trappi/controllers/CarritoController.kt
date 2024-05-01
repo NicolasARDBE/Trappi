@@ -1,5 +1,6 @@
 package com.example.trappi.controllers
 
+import android.app.Activity
 import android.util.Log
 import com.example.trappi.model.entities.Actividad
 import com.example.trappi.model.entities.Hospedaje
@@ -9,13 +10,12 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
-
+import java.util.*
 
 object CarritoController {
 
     var CARRITO_SAMPLE = "carrito_sample.json"
+
     fun agregarHotel(producto: String) {
         // Agregar producto al carrito
     }
@@ -30,7 +30,13 @@ object CarritoController {
 
     fun getCarrito(): Plan {
         // Obtener productos del carrito
-        return Plan(id = "", userId = "", vuelos = listOf(), hospedajes = listOf(), actividades = listOf())
+        return Plan(
+            id = "",
+            userId = "",
+            vuelos = listOf(),
+            hospedajes = listOf(),
+            actividades = listOf()
+        )
     }
 
     fun fromJson(json: String): Plan {
@@ -42,27 +48,41 @@ object CarritoController {
             val hospedajes = fromJsonHospedajes(jsonObject.getJSONArray("hospedajes"))
             val actividades = fromJsonActividades(jsonObject.getJSONArray("actividades"))
             // Convertir JSON a Plan
-            return Plan(id = id, userId = userId, vuelos = vuelos, hospedajes = hospedajes, actividades = actividades)
+            return Plan(
+                id = id,
+                userId = userId,
+                vuelos = vuelos,
+                hospedajes = hospedajes,
+                actividades = actividades
+            )
         } catch (e: JSONException) {
             Log.e("CarritoController", "Error al convertir JSON a Plan")
         }
         // Convertir JSON a Plan
-        return Plan(id = "", userId = "", vuelos = listOf(), hospedajes = listOf(), actividades = listOf())
+        return Plan(
+            id = "",
+            userId = "",
+            vuelos = listOf(),
+            hospedajes = listOf(),
+            actividades = listOf()
+        )
     }
 
     private fun fromJsonVuelos(array_vuelos: JSONArray): List<Vuelo> {
         val vuelos = mutableListOf<Vuelo>()
         for (i in 0 until array_vuelos.length()) {
             val vuelo = array_vuelos.getJSONObject(i)
-            vuelos.add(Vuelo(
-                id = vuelo.getString("id"),
-                numeroVuelo = vuelo.getString("numeroVuelo"),
-                lugarOrigen = vuelo.getString("lugarOrigen"),
-                lugarDestino = vuelo.getString("lugarDestino"),
-                fechaSalida = stringToDate(vuelo.getString("fechaSalida")),
-                aerolineaId = vuelo.getString("aerolineaId"),
-                precio = vuelo.getDouble("precio")
-            ))
+            vuelos.add(
+                Vuelo(
+                    id = vuelo.getString("id"),
+                    numeroVuelo = vuelo.getString("numeroVuelo"),
+                    lugarOrigen = vuelo.getString("lugarOrigen"),
+                    lugarDestino = vuelo.getString("lugarDestino"),
+                    fechaSalida = stringToDate(vuelo.getString("fechaSalida")),
+                    aerolineaId = vuelo.getString("aerolineaId"),
+                    precio = vuelo.getDouble("precio")
+                )
+            )
         }
         return vuelos
     }
@@ -71,13 +91,15 @@ object CarritoController {
         val hospedajes = mutableListOf<Hospedaje>()
         for (i in 0 until array_hospedajes.length()) {
             val hospedaje = array_hospedajes.getJSONObject(i)
-            hospedajes.add(Hospedaje(
-                id = hospedaje.getString("id"),
-                nombre = hospedaje.getString("nombre"),
-                estrellas = hospedaje.getString("estrellas"),
-                precioNoche = hospedaje.getString("precioNoche"),
-                destinoId = hospedaje.getString("destinoId"),
-            ))
+            hospedajes.add(
+                Hospedaje(
+                    id = hospedaje.getString("id"),
+                    nombre = hospedaje.getString("nombre"),
+                    estrellas = hospedaje.getString("estrellas"),
+                    precioNoche = hospedaje.getString("precioNoche"),
+                    destinoId = hospedaje.getString("destinoId"),
+                )
+            )
         }
         return hospedajes
     }
@@ -86,15 +108,17 @@ object CarritoController {
         val actividades = mutableListOf<Actividad>()
         for (i in 0 until array_actividades.length()) {
             val actividad = array_actividades.getJSONObject(i)
-            actividades.add(Actividad(
-                id = actividad.getString("id"),
-                nombre = actividad.getString("nombre"),
-                destinoId = actividad.getString("destinoId"),
-                fecha = stringToDate(actividad.getString("fecha")),
-                precio = actividad.getDouble("precio"),
-                estrellas = (actividad.getDouble("estrellas")).toInt(),
-                tipo = actividad.getString("tipo")
-            ))
+            actividades.add(
+                Actividad(
+                    id = actividad.getString("id"),
+                    nombre = actividad.getString("nombre"),
+                    destinoId = actividad.getString("destinoId"),
+                    fecha = stringToDate(actividad.getString("fecha")),
+                    precio = actividad.getDouble("precio"),
+                    estrellas = (actividad.getDouble("estrellas")).toInt(),
+                    tipo = actividad.getString("tipo")
+                )
+            )
         }
         return actividades
     }
@@ -109,7 +133,6 @@ object CarritoController {
         // Convertir Plan a JSON
         return jsonObject.toString()
     }
-
 
     private fun stringToDate(date: String): Date {
         try {
