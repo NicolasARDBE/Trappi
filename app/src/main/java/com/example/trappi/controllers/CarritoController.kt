@@ -1,6 +1,7 @@
 package com.example.trappi.controllers
 
 import android.app.Activity
+import android.content.res.AssetManager
 import android.util.Log
 import com.example.trappi.model.entities.Actividad
 import com.example.trappi.model.entities.Hospedaje
@@ -28,15 +29,26 @@ object CarritoController {
         // Eliminar producto del carrito
     }
 
-    fun getCarrito(): Plan {
+    fun getCarrito(assets: AssetManager): Plan {
+        try {
+            val carrito_json = assets.open(CARRITO_SAMPLE).bufferedReader().use {
+                it.readText()
+            }
+            return fromJson(carrito_json)
+        } catch (e: Exception) {
+            Log.e("[CarritoController]", e.toString())
+        }
         // Obtener productos del carrito
         return Plan(
             id = "",
             userId = "",
-            vuelos = listOf(),
-            hospedajes = listOf(),
-            actividades = listOf()
+            vuelos = mutableListOf(),
+            hospedajes = mutableListOf(),
+            actividades = mutableListOf()
         )
+
+
+
     }
 
     fun fromJson(json: String): Plan {
@@ -62,14 +74,14 @@ object CarritoController {
         return Plan(
             id = "",
             userId = "",
-            vuelos = listOf(),
-            hospedajes = listOf(),
-            actividades = listOf()
+            vuelos = mutableListOf(),
+            hospedajes = mutableListOf(),
+            actividades = mutableListOf()
         )
     }
 
-    private fun fromJsonVuelos(array_vuelos: JSONArray): List<Vuelo> {
-        val vuelos = mutableListOf<Vuelo>()
+    private fun fromJsonVuelos(array_vuelos: JSONArray): MutableList<Vuelo> {
+        val vuelos = mutableListOf<Vuelo>();
         for (i in 0 until array_vuelos.length()) {
             val vuelo = array_vuelos.getJSONObject(i)
             vuelos.add(
@@ -87,8 +99,8 @@ object CarritoController {
         return vuelos
     }
 
-    private fun fromJsonHospedajes(array_hospedajes: JSONArray): List<Hospedaje> {
-        val hospedajes = mutableListOf<Hospedaje>()
+    private fun fromJsonHospedajes(array_hospedajes: JSONArray): MutableList<Hospedaje> {
+        val hospedajes = mutableListOf<Hospedaje>();
         for (i in 0 until array_hospedajes.length()) {
             val hospedaje = array_hospedajes.getJSONObject(i)
             hospedajes.add(
@@ -104,7 +116,7 @@ object CarritoController {
         return hospedajes
     }
 
-    private fun fromJsonActividades(array_actividades: JSONArray): List<Actividad> {
+    private fun fromJsonActividades(array_actividades: JSONArray): MutableList<Actividad> {
         val actividades = mutableListOf<Actividad>()
         for (i in 0 until array_actividades.length()) {
             val actividad = array_actividades.getJSONObject(i)
@@ -136,7 +148,7 @@ object CarritoController {
 
     private fun stringToDate(date: String): Date {
         try {
-            return SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH).parse(date)!!
+            return SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.US).parse(date)!!
         } catch (e: Exception) {
             Log.e("CarritoController", "Error al convertir String a Date")
         }

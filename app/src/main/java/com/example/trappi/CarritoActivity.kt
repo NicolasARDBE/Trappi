@@ -11,12 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trappi.adapters.CarritoItemAdapter
 import com.example.trappi.controllers.CarritoController
 import com.example.trappi.databinding.ActivityCarritoBinding
+import com.example.trappi.model.entities.Actividad
+import com.example.trappi.model.entities.Hospedaje
+import com.example.trappi.model.entities.Plan
 import com.example.trappi.model.entities.Vuelo
 
 class CarritoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCarritoBinding
     private lateinit var adapter: CarritoItemAdapter
-    var carrito = ArrayList<Vuelo>()
+    var carrito: Plan = Plan("Carrito", "user", ArrayList<Vuelo>(), ArrayList<Hospedaje>(), ArrayList<Actividad>())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCarritoBinding.inflate(layoutInflater)
@@ -28,17 +31,14 @@ class CarritoActivity : AppCompatActivity() {
             insets
         }
         try {
-            val carrito_json = assets.open(CarritoController.CARRITO_SAMPLE).bufferedReader().use {
-                it.readText()
-            }
-            val plan = CarritoController.fromJson(carrito_json)
-            Log.i("Carrito",plan.toString())
+            carrito = CarritoController.getCarrito(assets)
+            Log.i("[Carrito]",carrito.toString())
+
 //            val sharedPref: SharedPreferences = applicationContext.getSharedPreferences("carrito", MODE_PRIVATE)
 //            val carritoString = sharedPref.getString("carrito", null)
         }
         catch (e: Exception) {
-            carrito = ArrayList()
-            Log.e("Carrito", e.toString())
+            Log.e("[Carrito]", e.toString())
         }
         setupRecyclerView()
     }
@@ -47,7 +47,7 @@ class CarritoActivity : AppCompatActivity() {
 
     fun setupRecyclerView() {
         binding.rvListaCarro.layoutManager = LinearLayoutManager(this)
-        adapter = CarritoItemAdapter(binding.tvTotal, carrito)
+        adapter = CarritoItemAdapter(binding.tvTotal, ArrayList(carrito.vuelos))
         binding.rvListaCarro.adapter = adapter
     }
 }

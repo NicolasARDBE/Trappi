@@ -27,7 +27,8 @@ class Dest_PaqTuristico : AppCompatActivity() {
     }
 
     private fun obtenerListaPlanes(): List<Plan> {
-        val carritoJson = CarritoController.getCarrito() // Obtener el JSON del carrito
+        // TODO:  El Plan es el CARRITO, no existe una LISTA DE PLANES
+        val carritoJson = CarritoController.getCarrito(assets) // Obtener el JSON del carrito
         val planes = mutableListOf<Plan>()
 
         // Si el carrito no está vacío, convertir el JSON del carrito a objetos Plan
