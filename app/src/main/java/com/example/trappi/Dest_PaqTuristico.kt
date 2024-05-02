@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.trappi.adapters.AdapterPaquetes
 import com.example.trappi.controllers.PlanManager
 import com.example.trappi.databinding.ActivityDestPaqTuristicoBinding
@@ -14,9 +16,14 @@ class Dest_PaqTuristico : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityDestPaqTuristicoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dest_paq_turistico)
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
         mostrarPlanes()
 
         binding.menu.setOnClickListener{

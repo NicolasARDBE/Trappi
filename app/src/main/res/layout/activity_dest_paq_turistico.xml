@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -15,11 +16,8 @@
         android:layout_marginTop="16dp"
         android:background="@color/white_vanilla"
         android:scaleType="fitCenter"
-        android:src="@drawable/baseline_menu_24" /><![CDATA[
+        android:src="@drawable/baseline_menu_24" />
 
-    />
-
-    ]]>
 
     <TextView
         android:id="@+id/destino"
