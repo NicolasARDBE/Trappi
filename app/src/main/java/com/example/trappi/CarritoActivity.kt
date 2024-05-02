@@ -1,5 +1,6 @@
 package com.example.trappi
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -40,8 +41,13 @@ class CarritoActivity : AppCompatActivity() {
             Log.e("[Carrito]", e.toString())
         }
         setupRecyclerView()
-    }
 
+        binding.CheckOutButton.setOnClickListener {
+            val intent = Intent(this, CheckOut::class.java)
+            startActivity(intent)
+        }
+
+    }
 
 
     fun setupRecyclerView() {

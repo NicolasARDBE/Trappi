@@ -10,9 +10,9 @@
 
     <string name="carrito_total">Total a pagar: $</string>
     <string name="checkOut">CheckOut</string>
+    <string name="preferencias">Crea tu Plan</string>
     <string name="carrito">Carrito</string>
-    <string name="Menu_For_Testing">Menu For Testing</string>
-    <string name="menu_for_testing_screens">This is a menu for testing screens\nFeel free to add your buttons to your screens</string>
+    <string name="Menu_For_Testing">Menu</string>
     <string name="product_Name">Nombre del producto</string>
     <string name="price">Precio</string>
     <string name="payment">Pago</string>

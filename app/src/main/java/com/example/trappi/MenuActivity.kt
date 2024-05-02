@@ -25,8 +25,8 @@ class MenuActivity : AppCompatActivity() {
         binding.buttonCarrito.setOnClickListener {
             startActivity(Intent(baseContext, CarritoActivity::class.java))
         }
-        binding.buttonCheckout.setOnClickListener {
-            startActivity(Intent(baseContext, CheckOut::class.java))
+        binding.buttonPreferencias.setOnClickListener {
+            startActivity(Intent(baseContext, Preferencias::class.java))
         }
     }
 }

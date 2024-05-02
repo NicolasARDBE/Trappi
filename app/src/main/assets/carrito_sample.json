@@ -10,7 +10,7 @@
         "lugarOrigen": "Roma",
         "lugarDestino": "París",
         "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
-        "precio": 350.0
+        "precio": 700.0
       },
       {
         "id": "flight_002",
@@ -19,7 +19,7 @@
         "lugarOrigen": "París",
         "lugarDestino": "Roma",
         "fechaSalida": "Mon Apr 29 06:33:30 GMT 2024",
-        "precio": 400.0
+        "precio": 500.0
       }
     ],
     "hospedajes": [

@@ -1,76 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white_vanilla"
-    >
+    android:background="@color/white">
 
     <ImageButton
-    android:id="@+id/menu"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="16dp"
-    android:background="@color/gray"
-    android:scaleType="fitCenter"
-    android:src="@drawable/baseline_menu_24" />
-
-    <ImageButton
-        android:id="@+id/logOut"
+        android:id="@+id/menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
-        android:background="@color/gray"
+        android:background="@color/white_vanilla"
         android:scaleType="fitCenter"
-        android:src="@drawable/baseline_logout_24"
-        tools:src="@drawable/baseline_logout_24" />
-        />
+        android:src="@drawable/baseline_menu_24" /><![CDATA[
+
+    />
+
+    ]]>
 
     <TextView
         android:id="@+id/destino"
         android:layout_width="300dp"
         android:layout_height="20dp"
+        android:layout_below="@+id/menu"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="28dp"
-        android:layout_below="@+id/menu"
         android:textAlignment="textStart"
         android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="319dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="28dp"
-        android:textColor="@color/black"
         android:layout_below="@+id/destino"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="44dp"
         android:text="@string/paquetesFondsss"
+        android:textColor="@color/black"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="30dp"
-        android:textColor="@color/black"
         android:layout_below="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/destPack"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listStar"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textView3"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp" />
 
 </RelativeLayout>
