@@ -16,7 +16,7 @@ import java.util.Locale
 class PlanManager {
     lateinit var planes: JSONArray
     var listaPlanes: MutableList<Plan> = mutableListOf()
-    val jsonFile = "carrito_sample.json"
+    val jsonFile = "planes_samples.json"
 
     companion object{
         val instance: PlanManager by lazy { PlanManager() }
@@ -100,7 +100,7 @@ class PlanManager {
                         id = hospedajeObject.getString("id"),
                         nombre = hospedajeObject.getString("nombre"),
                         estrellas = hospedajeObject.getString("estrellas"),
-                        precioNoche = hospedajeObject.getString("precioNoche"),
+                        precioNoche = hospedajeObject.getDouble("precioNoche"),
                         destinoId = hospedajeObject.getString("destinoId")
                     )
                 )

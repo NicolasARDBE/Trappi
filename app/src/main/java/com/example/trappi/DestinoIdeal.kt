@@ -1,5 +1,6 @@
 package com.example.trappi
 
+import android.content.Intent
 import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,6 +44,12 @@ class DestinoIdeal : AppCompatActivity() {
             }else{
                 false
             }
+        }
+        binding.menu.setOnClickListener{
+            startActivity(Intent(baseContext, MenuActivity::class.java))
+        }
+        binding.buttonContinuar.setOnClickListener{
+            startActivity(Intent(baseContext, CarritoActivity::class.java))
         }
     }
 

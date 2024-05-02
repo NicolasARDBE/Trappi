@@ -25,9 +25,20 @@
         android:layout_width="226dp"
         android:layout_height="54dp"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="256dp"
         android:backgroundTint="@color/blue_bright"
         android:text="@string/carrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_home"
+        android:layout_width="226dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="336dp"
+        android:backgroundTint="@color/blue_bright"
+        android:text="@string/home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,11 +46,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
+        android:layout_marginStart="128dp"
         android:layout_marginTop="52dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/Menu_For_Testing"
-        android:textSize="24sp"
+        android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

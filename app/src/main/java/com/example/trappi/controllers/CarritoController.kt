@@ -35,7 +35,7 @@ object CarritoController {
             }
             return fromJson(carrito_json)
         } catch (e: Exception) {
-            Log.e("[CarritoController]", e.toString())
+            Log.e("[CarritoController] Error getCarrito", e.toString())
         }
         // Obtener productos del carrito
         return Plan(
@@ -51,8 +51,8 @@ object CarritoController {
     }
 
     fun fromJson(json: String): Plan {
-        val jsonObject = JSONObject(json)
         try {
+            val jsonObject = JSONObject(json)
             val id = jsonObject.getString("id")
             val userId = jsonObject.getString("userId")
             val vuelos = fromJsonVuelos(jsonObject.getJSONArray("vuelos"))
@@ -67,7 +67,7 @@ object CarritoController {
                 actividades = actividades
             )
         } catch (e: JSONException) {
-            Log.e("CarritoController", "Error al convertir JSON a Plan")
+            Log.e("[CarritoController]", "Error al convertir JSON a Plan: "+e.toString())
         }
         // Convertir JSON a Plan
         return Plan(
@@ -107,7 +107,7 @@ object CarritoController {
                     id = hospedaje.getString("id"),
                     nombre = hospedaje.getString("nombre"),
                     estrellas = hospedaje.getString("estrellas"),
-                    precioNoche = hospedaje.getString("precioNoche"),
+                    precioNoche = hospedaje.getDouble("precioNoche"),
                     destinoId = hospedaje.getString("destinoId"),
                 )
             )
@@ -149,7 +149,7 @@ object CarritoController {
         try {
             return SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.US).parse(date)!!
         } catch (e: Exception) {
-            Log.e("CarritoController", "Error al convertir String a Date")
+            Log.e("[CarritoController]", "Error al convertir String a Date")
         }
         // Mon Apr 29 06:33:30 GMT 2024
         return Date()

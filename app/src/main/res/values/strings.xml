@@ -10,19 +10,20 @@
 
     <string name="carrito_total">Total a pagar: $</string>
     <string name="checkOut">CheckOut</string>
+    <string name="home">Home</string>
     <string name="preferencias">Crea tu Plan</string>
     <string name="carrito">Carrito</string>
     <string name="Menu_For_Testing">Menu</string>
-    <string name="product_Name">Nombre del producto</string>
+    <string name="product_Name">Plan Viaje Delicioso</string>
     <string name="price">Precio</string>
     <string name="payment">Pago</string>
     <string name="confirmar_pago">Confirmar pago</string>
     <string name="orden">Orden</string>
-    <string name="precio_orden">$100,00</string>
+    <string name="precio_orden">$1.700,00</string>
     <string name="fee">Comision</string>
-    <string name="precio_fee">$1.200,00</string>
-    <string name="total">Total</string>$1.200,00
-    <string name="precio_total">$1.300,99</string>
+    <string name="precio_fee">$100,00</string>
+    <string name="total">Total</string>
+    <string name="precio_total">$1.800,99</string>
     <string name="pago_exitoso">Pago exitoso</string>
     <string name="bienvenida">Bienvenido a Trappi</string>
     <string name="descrHome">Aquí puedes organizar tus próximas vacaciones!</string>

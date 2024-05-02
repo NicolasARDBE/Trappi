@@ -9,10 +9,88 @@
     android:layout_height="match_parent"
     tools:context=".CarritoActivity">
 
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/carrito"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVuelos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="Vuelos"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListaCarro"
-        android:layout_width="373dp"
-        android:layout_height="454dp"
+        android:layout_width="357dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22"
+        tools:listitem="@layout/carrito_item" />
+
+    <TextView
+        android:id="@+id/textViewActividades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="192dp"
+        android:text="Activades"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaActividadesCarro"
+        android:layout_width="364dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61"
+        tools:listitem="@layout/carrito_item" />
+
+    <TextView
+        android:id="@+id/textViewHospedaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="388dp"
+        android:text="Hospedaje"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaHospedajeCarro"
+        android:layout_width="357dp"
+        android:layout_height="145dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -20,8 +98,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
+        app:layout_constraintVertical_bias="0.988"
         tools:listitem="@layout/carrito_item" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/carrito_total"
+        app:layout_constraintEnd_toStartOf="@+id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/rvListaActividadesCarro" />
 
     <TextView
         android:id="@+id/tvTotal"
@@ -29,45 +117,23 @@
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="56dp"
         android:gravity="center"
         android:text="@string/precio_fee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/carrito"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/CheckOutButton"
         android:layout_width="133dp"
         android:layout_height="46dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/blue_bright"
         android:text="Checkout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="72dp"
-        android:text="@string/carrito_total"
-        app:layout_constraintEnd_toStartOf="@+id/tvTotal"
-        app:layout_constraintTop_toBottomOf="@+id/rvListaCarro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

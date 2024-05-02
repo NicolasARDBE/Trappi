@@ -6,12 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trappi.R
+import com.example.trappi.model.entities.Actividad
+import com.example.trappi.model.entities.Hospedaje
 import com.example.trappi.model.entities.Vuelo
 
-class CarritoItemAdapter (
+class CarritoHospedajeItemAdapter (
     var tvTotal: TextView,
-    var carroCompras: ArrayList<Vuelo>
-): RecyclerView.Adapter<CarritoItemAdapter.ViewHolder>() {
+    var carroCompras: ArrayList<Hospedaje>
+): RecyclerView.Adapter<CarritoHospedajeItemAdapter.ViewHolder>() {
 
     var total: Double = 0.0
 
@@ -27,10 +29,14 @@ class CarritoItemAdapter (
     ): ViewHolder {
         val vista = LayoutInflater.from(parent.context).inflate(R.layout.carrito_item, parent, false)
 
-        total = 0.0
+        try {
+            total = tvTotal.text.toString().toDouble()
+        }catch (e: Exception){
+            total = 0.0
+        }
 
         carroCompras.forEach {
-            total += it.precio
+            total += it.precioNoche
         }
 
         tvTotal.text = "$total"
@@ -41,9 +47,9 @@ class CarritoItemAdapter (
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val producto = carroCompras[position]
 
-        holder.tvNomProducto.text = producto.lugarOrigen
-        holder.tvDescripcion.text = producto.lugarDestino
-        holder.tvPrecio.text = "${producto.precio}"
+        holder.tvNomProducto.text = producto.nombre
+        holder.tvDescripcion.text = producto.estrellas
+        holder.tvPrecio.text = "${producto.precioNoche}"
     }
 
     override fun getItemCount(): Int {

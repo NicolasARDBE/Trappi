@@ -28,5 +28,8 @@ class MenuActivity : AppCompatActivity() {
         binding.buttonPreferencias.setOnClickListener {
             startActivity(Intent(baseContext, Preferencias::class.java))
         }
+        binding.buttonHome.setOnClickListener {
+            startActivity(Intent(baseContext, HomeActivity::class.java))
+        }
     }
 }

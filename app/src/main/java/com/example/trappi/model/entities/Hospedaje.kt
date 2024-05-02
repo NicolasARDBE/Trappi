@@ -5,5 +5,5 @@ data class Hospedaje(
     val nombre: String,
     val destinoId: String,
     val estrellas: String,
-    val precioNoche: String
+    val precioNoche: Double
 )

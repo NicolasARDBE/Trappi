@@ -41,12 +41,13 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="textStart"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu" />
 
@@ -94,16 +95,18 @@
 
     <org.osmdroid.views.MapView
         android:id="@+id/map"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="382dp"
+        android:layout_height="396dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search"></org.osmdroid.views.MapView>
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintVertical_bias="0.0"></org.osmdroid.views.MapView>
 
     <ImageView
         android:id="@+id/imageView"
@@ -119,5 +122,16 @@
         app:layout_constraintStart_toEndOf="@+id/search"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/baseline_search_24" />
+
+    <Button
+        android:id="@+id/buttonContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/green_bright"
+        android:text="Continuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

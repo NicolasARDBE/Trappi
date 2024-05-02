@@ -36,5 +36,10 @@ class Dest_PaqTuristico : AppCompatActivity() {
         val adapter = AdapterPaquetes(this, PlanManager.instance.listaPlanes)
         val listaPlanes = findViewById<ListView>(R.id.listStar)
         listaPlanes.adapter = adapter
+        listaPlanes.setOnItemClickListener({ parent, view, position, id ->
+            val intent = Intent(this, DestinoIdeal::class.java)
+//            intent.putExtra("plan", PlanManager.instance.listaPlanes[position])
+            startActivity(intent)
+        })
     }
 }
